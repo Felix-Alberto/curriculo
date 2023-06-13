@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+
+:root{
+    --body-color: hsl(0, 0%, 93%);
+    --container-color: hsl(0, 0%, 100%);
+    --container-second-color: hsl(198, 100%, 13%); 
+    --color: hsl(195, 100%, 50%);
+
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.main{
+overflow: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 62.5rem;
+    min-height: 62.25rem;
+    background: var(--container-color);
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.container .left_Side{
+    position: relative;
+    background: var(--container-second-color);
+    padding: 40px;
+    
+z-index: 1000;
+}
+.profile_text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profile_text .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile_text .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile_text h2{
+    color: var(--container-color);
+    font-size: 1rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.6rem;
+}
+.info_contact, .about_contact{
+    padding-top: 60px;
+}
+.title{
+    color: var(--container-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.info_contact ul{
+    position: relative;
+}
+.info_contact ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.info_contact ul li .icon {
+    display: initial;
+    width: 10px;
+    font-size: 14px;
+    color: var(--color);
+
+}
+.info_contact ul li span, .about_contact{
+    color: var(--container-color);
+    font-weight: 300;
+}
+.info_contact.idionas .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.info_contact.idionas .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.container .right_Side{
+    position: relative;
+    background: var(--container-color);
+    padding: 40px 14px;
+    margin-left: 3%;
+}
+
+
+
+.about_container,
+.experience_container{
+    row-gap: 2.5rem;
+    margin-top: 35%;
+}
+.about_data, .experience_data{
+    text-align: initial;
+    margin-right: 11%;
+    padding-left: 6%;
+    margin-top: -31%;
+}
+.about_description{
+    margin-bottom: 2rem;
+    color: var(--second-text-color);
+}
+.button_about, 
+.experience_about,
+.knowledge_about,
+.course_about{
+    display: inline-block;
+    background-color: var(--container-second-color);
+    padding: .65rem 1.75rem;
+    border-radius: .5rem;
+    color: var(--container-color);
+    transform: rotate(-90deg);
+    height: 5%;
+   margin-left: -14%;
+    position: absolute;
+    margin-top: 11%;
+}
+
+.experience_about{
+    margin-top: 20%;
+}
+.experience_data{
+    margin-top: -26%;
+}
+.knowledge_about{
+    margin-left: -17%;
+    margin-top: 6%;
+}
+.knowledge_data{
+    margin-top: 9%;
+    margin-left: 6%;
+}
+.course_about{
+    margin-top: 11%;
+    margin-left: -12%;
+}
+.course_data{
+    margin-top: 8%;
+    margin-left: 6%;
+}
+@media (max-width: 1000px) {
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .button_about, 
+    .experience_about,
+    .knowledge_about,
+    .course_about{
+        background-color: var(--container-color);
+        padding: .65rem 1.75rem;
+        color: var(--container-second-color);
+        margin-left: 3%;
+        position: absolute;
+        margin-top: -6%;
+        transform: rotate(0deg);
+        font-size: 27px;
+        font-weight: 600;
+    }
+
+}
+@media (max-width: 600px) {
+    .button_about, 
+    .experience_about,
+    .knowledge_about,
+    .course_about{       
+        margin-top: -11%;
+        
+    }
+    .experience_data {
+       margin-top: -22%;
+}
+.knowledge_data {
+    margin-top: 13%;
+}
+.course_data {
+    margin-top: 14%;
+}
+.about_container, .experience_container {
+    margin-top: 40%;
+}
+
+}
